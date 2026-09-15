@@ -253,7 +253,7 @@ Products are displayed with different availability badges:
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Santhoshmarkonda/Product-availability-Project.git
 ```
 
 ### 2. Navigate to the project
@@ -394,18 +394,18 @@ Some possible enhancements:
 
 ## 👨‍💻 Author
 
-**Santhosh**
+**Santhosh Kumar Markonda**
 
 Computer Science Engineering Graduate
 Java Backend & React Developer
 
 ### GitHub
 
-Add your GitHub profile URL here.
+https://github.com/Santhoshmarkonda
 
 ### LinkedIn
 
-Add your LinkedIn profile URL here.
+https://www.linkedin.com/in/santhosh-kumar-markonda/
 
 ---
 
