@@ -1,44 +1,30 @@
 import './index.css'
 
-const ProductCard = props => {
-  const {
-    title,
-    category,
-    image,
-    price,
-    rating,
-  } = props.value
+const ProductCard = ({product}) => {
+  const {thumbnail, title, rating, category, price, stock} = product
 
   return (
     <div className="product-card">
-      <div className="image-container">
-        <img
-          className="product-image"
-          src={image}
-          alt={title}
-        />
-      </div>
+      <img
+        className="product-image"
+        src={thumbnail}
+        alt={title}
+      />
 
-      <div className="product-details">
-        <p className="product-category">{category}</p>
-
-        <h2 className="product-title">
-          {title}
-        </h2>
-
-        <p className="product-price">
-          ₹{price}
+      <div className="product-info">
+        <p className="product-title">
+          {title} <span className="product-rating">⭐ {rating}</span>
         </p>
 
-        <div className="rating-container">
-          <span className="rating">
-            ⭐ {rating.rate}
-          </span>
+        <p className="product-category">{category}</p>
+      </div>
 
-          <span className="review-count">
-            ({rating.count} reviews)
-          </span>
-        </div>
+      <div className="product-footer">
+        <p className="product-price">${price}</p>
+        <p className="product-stock">{stock} Items Available</p>
+        <button className="add-button" type="button">
+          Add
+        </button>
       </div>
     </div>
   )

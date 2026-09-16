@@ -1,38 +1,41 @@
-import "./index.css";
+import './index.css'
 
 const Header = () => {
   return (
-    <header className="container">
-      <div className="header">
-        <div className="con">
+    <header className="header">
+      <div className="brand">
+        <img
+          className="brand-icon"
+          src="https://img.icons8.com/?size=100&id=CE7rP-35_XQR&format=png&color=000000"
+          alt="shopping cart"
+        />
+        <h1 className="heading">
+          FreshCart <br />
+          Product Availability
+        </h1>
+      </div>
+
+      <div className="header-actions">
+        <div className="location">
           <img
-            className="cart-image"
-            src="https://img.icons8.com/?size=100&id=85383&format=png&color=000000"
-            alt="shopping cart"
+            className="location-icon"
+            src="https://img.icons8.com/?size=100&id=p5n5ZAUprZsA&format=png&color=000000"
+            alt="location"
           />
-          <h1 className="heading">Product Availability</h1>
+          <p>Hyderabad</p>
         </div>
 
-        <div className="search-container">
+        <div className="cart">
           <img
-            className="search-icon"
-            src="https://img.icons8.com/?size=100&id=HNqs6ySvgu0d&format=png&color=000000"
-            alt="search"
+            className="cart-icon"
+            src="https://img.icons8.com/?size=100&id=BBhHIwJINbBl&format=png&color=000000"
+            alt="shopping cart"
           />
-
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Search Products"
-          />
-
-          <button type="button" className="btn">
-            Add New Product
-          </button>
+          <span>0</span>
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
 export default Header

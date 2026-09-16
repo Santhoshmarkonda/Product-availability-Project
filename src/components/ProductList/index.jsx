@@ -1,30 +1,26 @@
-import {useEffect, useState} from 'react'
-import ProductCard from '../ProductCard'
 import './index.css'
+import ProductCard from '../ProductCard'
+import {useState, useEffect} from 'react'
 
 const ProductList = () => {
   const [list, setList] = useState([])
 
   useEffect(() => {
     const getProductsList = async () => {
-      const url = 'https://fakestoreapi.com/products'
-
+      const url = 'https://dummyjson.com/products'
       const response = await fetch(url)
       const responseData = await response.json()
 
-      setList(responseData)
+      setList(responseData.products)
     }
 
     getProductsList()
   }, [])
 
   return (
-    <div className="product-list">
+    <div className="products-container">
       {list.map(item => (
-        <ProductCard
-          key={item.id}
-          value={item}
-        />
+        <ProductCard key={item.id} product={item} />
       ))}
     </div>
   )

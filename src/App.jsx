@@ -1,15 +1,14 @@
-import './App.css'
 import Header from './components/Header'
 import ProductList from './components/ProductList'
+import Footer from './components/Footer'
 
-function App() {
-  
-
+const App = () => {
   return (
-    <div>
-      <Header/>
+    <>
+      <Header />
       <ProductList />
-    </div>
+      <Footer/>
+    </>
   )
 }
 
