@@ -3,6 +3,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 24px;
+  background-color: #F8FAFC;
 }
 
 @media (max-width: 900px) {

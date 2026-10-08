@@ -1,11 +1,23 @@
 .footer {
-  padding: 10px;
+  padding: 24px;
+
   text-align: center;
-  background-color: yellow;
-  color: #333;
-  border-top: 1px solid #ddd;
+
+  background-color: #166534;
+  color: #ffffff;
+
+  border-top: 1px solid #14532d;
+
+  box-shadow: 0 -4px 14px rgba(15, 23, 42, 0.18);
 }
 
 .footer h2 {
-  font-size: 20px;
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.footer p {
+  margin: 0;
+  color: #dcfce7;
+  font-size: 14px;
 }

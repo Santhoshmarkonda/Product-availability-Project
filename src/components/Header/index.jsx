@@ -3,19 +3,28 @@ import './index.css'
 const Header = () => {
   return (
     <header className="header">
+      
       <div className="brand">
         <img
           className="brand-icon"
           src="https://img.icons8.com/?size=100&id=CE7rP-35_XQR&format=png&color=000000"
           alt="shopping cart"
         />
+
         <h1 className="heading">
           FreshCart <br />
           Product Availability
         </h1>
       </div>
 
+      <nav className="nav-links">
+        <a href="#home">Home</a>
+        <a href="#search">Search</a>
+        <a href="#products">Products</a>
+      </nav>
+
       <div className="header-actions">
+
         <div className="location">
           <img
             className="location-icon"
@@ -31,9 +40,11 @@ const Header = () => {
             src="https://img.icons8.com/?size=100&id=BBhHIwJINbBl&format=png&color=000000"
             alt="shopping cart"
           />
-          <span>0</span>
+          <span>Cart</span>
         </div>
+
       </div>
+
     </header>
   )
 }
