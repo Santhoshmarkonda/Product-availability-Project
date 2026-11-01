@@ -1,25 +1,18 @@
 .products-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 20px;
-  padding: 24px;
-  background-color: #F8FAFC;
+  padding: 20px 0;
 }
 
-@media (max-width: 900px) {
-  .products-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .products-container {
     grid-template-columns: repeat(2, 1fr);
-    padding: 16px;
+    gap: 14px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .products-container {
     grid-template-columns: 1fr;
   }

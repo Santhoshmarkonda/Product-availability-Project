@@ -1,158 +1,84 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box;
+  height: 70px;
+  padding: 0 40px;
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  padding: 12px 24px;
-
-  background-color: #166534;
-  color: #ffffff;
-
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
 }
 
+/* Brand */
 
 .brand {
   display: flex;
   align-items: center;
   gap: 10px;
-
-  flex-shrink: 0;
 }
 
 .brand-icon {
-  width: 35px;
-  height: 35px;
-
-  filter: brightness(0) invert(1);
+  width: 32px;
+  height: 32px;
 }
 
 .heading {
   margin: 0;
-
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 24px;
   font-weight: 700;
 }
+
+/* Navigation */
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
-
-  margin: 0 auto;
+  gap: 32px;
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: #333333;
   text-decoration: none;
-
   font-size: 15px;
   font-weight: 500;
-
-  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #dcfce7;
+  color: #000000;
 }
 
+/* Location */
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-
-  flex-shrink: 0;
-}
-
-.location,
-.cart {
+.location {
   display: flex;
   align-items: center;
   gap: 6px;
-
-  color: #ffffff;
 }
 
-.location-icon,
-.cart-icon {
-  width: 24px;
-  height: 24px;
-
-  filter: brightness(0) invert(1);
+.location-icon {
+  width: 20px;
+  height: 20px;
 }
 
-.location p,
-.cart span {
+.location p {
   margin: 0;
-
   font-size: 14px;
+  color: #555555;
 }
 
-.cart span {
-  font-weight: 600;
-}
+/* Responsive */
 
-
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .header {
-    padding: 10px 16px;
-  }
-
-  .heading {
-    font-size: 16px;
-  }
-
-  .brand-icon {
-    width: 30px;
-    height: 30px;
+    padding: 0 20px;
   }
 
   .nav-links {
-    gap: 14px;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-  }
-
-  .header-actions {
-    gap: 12px;
-  }
-
-  .location p {
-    display: none;
-  }
-}
-
-
-@media (max-width: 500px) {
-  .heading {
-    display: none;
-  }
-
-  .nav-links {
-    gap: 10px;
-  }
-
-  .nav-links a {
-    font-size: 12px;
+    gap: 16px;
   }
 
   .location {
     display: none;
-  }
-
-  .header-actions {
-    gap: 8px;
   }
 }

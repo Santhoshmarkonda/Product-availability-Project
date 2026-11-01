@@ -6,51 +6,65 @@ const ProductFilters = ({
   setSearchTerm,
   selectedCategory,
   setSelectedCategory,
+  sortBy,
+  setSortBy,
 }) => {
-  const uniqueCategories = new Set();
+  const categories = [];
 
-  for (let product of list) {
-    uniqueCategories.add(product.category);
-  }
-
-  const categories = [...uniqueCategories];
-
-  const onSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const onCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
-  };
+  list.forEach((product) => {
+    if (!categories.includes(product.category)) {
+      categories.push(product.category);
+    }
+  });
 
   return (
     <div className="product-filters">
-      <div className="search-bar">
-        <img
-          className="search-icon"
-          src="https://img.icons8.com/?size=100&id=7695&format=png&color=000000"
-          alt="search"
-        />
 
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={onSearchChange}
-          placeholder="Search for products..."
-        />
-      </div>
+      <input
+        type="text"
+        placeholder="Search products"
+        value={searchTerm}
+        onChange={(event) =>
+          setSearchTerm(event.target.value)
+        }
+      />
 
-      <div className="category-list">
-        <select value={selectedCategory} onChange={onCategoryChange}>
-          <option value="all">All Categories</option>
+      <select
+        value={selectedCategory}
+        onChange={(event) =>
+          setSelectedCategory(event.target.value)
+        }
+      >
+        <option value="all">All Categories</option>
 
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
-      </div>
+        {categories.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+      </select>
+
+      <select
+        value={sortBy}
+        onChange={(event) =>
+          setSortBy(event.target.value)
+        }
+      >
+        <option value="default">Sort By</option>
+        <option value="price-low">
+          Price: Low to High
+        </option>
+        <option value="price-high">
+          Price: High to Low
+        </option>
+        <option value="name-az">
+          Name: A-Z
+        </option>
+        <option value="name-za">
+          Name: Z-A
+        </option>
+      </select>
+
     </div>
   );
 };

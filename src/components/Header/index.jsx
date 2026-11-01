@@ -1,9 +1,10 @@
-import './index.css'
+import { Link } from "react-router";
+import "./index.css";
 
 const Header = () => {
   return (
     <header className="header">
-      
+
       <div className="brand">
         <img
           className="brand-icon"
@@ -12,41 +13,30 @@ const Header = () => {
         />
 
         <h1 className="heading">
-          FreshCart <br />
-          Product Availability
+          FreshCart
         </h1>
       </div>
 
       <nav className="nav-links">
-        <a href="#home">Home</a>
-        <a href="#search">Search</a>
-        <a href="#products">Products</a>
+        <Link to="/">Home</Link>
+        <Link to="/products">Products</Link>
+        <Link to="/cart">Cart</Link>
       </nav>
 
       <div className="header-actions">
-
         <div className="location">
           <img
             className="location-icon"
             src="https://img.icons8.com/?size=100&id=p5n5ZAUprZsA&format=png&color=000000"
             alt="location"
           />
+
           <p>Hyderabad</p>
         </div>
-
-        <div className="cart">
-          <img
-            className="cart-icon"
-            src="https://img.icons8.com/?size=100&id=BBhHIwJINbBl&format=png&color=000000"
-            alt="shopping cart"
-          />
-          <span>Cart</span>
-        </div>
-
       </div>
 
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

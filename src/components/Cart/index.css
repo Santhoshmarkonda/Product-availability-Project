@@ -1,0 +1,43 @@
+.cart-page {
+  min-height: calc(100vh - 80px);
+
+  padding: 50px;
+
+  background-color: #f8fafc;
+}
+
+.cart-container {
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+.cart-container h2 {
+  margin-bottom: 25px;
+
+  font-size: 28px;
+  color: #111827;
+}
+
+.empty-cart {
+  padding: 50px;
+
+  text-align: center;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.empty-cart p {
+  margin: 0;
+
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 30px 20px;
+  }
+}
